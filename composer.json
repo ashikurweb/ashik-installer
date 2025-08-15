@@ -1,19 +1,33 @@
 {
-    "name": "ashikur/mvc",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/",
-            "Core\\": "Core/",
-            "Http\\": "Http/",
-            "Database\\": "database/"
-        }
-    },
+    "name": "ashik/laravel-installer",
+    "description": "A simple installer for Laravel applications.",
+    "license": "MIT",
     "authors": [
         {
-            "name": "ashikurweb",
+            "name": "Ashikur Rahman",
             "email": "ashikurrahman7194@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ashik\\LaravelInstaller\\": "src/"
+        },
+        "files": [
+            "src/Helpers/functions.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Ashik\\LaravelInstaller\\Providers\\LaravelInstallerServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
 }
